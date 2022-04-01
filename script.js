@@ -49,7 +49,7 @@ function generatePassword() {
        var word = '';
 
        //get target number (passwordLength ) of characters for (yourPasswordArray)
-       for (let index = 0; index < yourPasswordArray; index++) {
+       for (let index = 0; index < passwordLength; index++) {
          // get random values from array
          word += yourPasswordArray[Math.floor(Math.random() * yourPasswordArray.length)];
        }
@@ -63,9 +63,7 @@ function generatePassword() {
 
 
   }
-
 // Write password to the #password input
-
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -73,6 +71,5 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
